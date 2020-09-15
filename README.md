@@ -25,12 +25,7 @@ Also make sure you add the capability ```--cap-add=SYS_NICE``` otherwise you wil
 #### Example docker run
 
 ```
-docker run -d \
---restart unless-stopped \
---name='sdrplay_dump1090' \
---cap-add=SYS_NICE \
---device=/dev/bus/usb \
-f4fhh/sdrplay_dump1090
+docker run -d -p 8080:8080 --restart unless-stopped --name='sdrplay_dump1090' --cap-add=SYS_NICE --device=/dev/bus/usb f4fhh/sdrplay_dump1090
 ```
 ### HISTORY
  - Version 0.1.0: Initial build
