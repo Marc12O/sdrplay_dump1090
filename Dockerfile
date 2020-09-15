@@ -40,7 +40,7 @@ RUN true
 COPY --from=builder /usr/local/lib/ /usr/local/lib/
 RUN ldconfig
 WORKDIR /usr/local/lib/dump1090
-CMD ["./dump1090", "--dev-sdrplay", "--mlat", "--quiet", "--net"]
+CMD ["./dump1090", "--dev-sdrplay", "--mlat", "--quiet", "--net", "&&", "./dump1090", "--mlat", "--quiet", "--net" ]
 
 # Web portal
 EXPOSE 8080/tcp
