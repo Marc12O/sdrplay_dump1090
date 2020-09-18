@@ -1,4 +1,4 @@
-FROM debian:stretch-slim AS base
+FROM debian:buster-slim AS base
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
